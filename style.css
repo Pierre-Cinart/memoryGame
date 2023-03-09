@@ -43,6 +43,15 @@ div .back{
     left: 0;
 }
 
+.visible {
+    display: inline-block;
+
+}
+.notVisible {
+    display: none;
+
+}
+
 #view_port{
     width: 70rem;
     margin: auto;

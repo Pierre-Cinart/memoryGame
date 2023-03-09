@@ -11,15 +11,17 @@ let imgSources =  [
     "./images/rat.png"
 
 ];
-let initViewport = 0;
-// select the screen
+
 const vp = document.querySelector('#view_port') ;
+
+let imagesViewPort = [];// for draw images with random sources of images
+
 
 function start(){
     //required variables
     let images = [];// for get the images sources multiply by 2
     let maxCard = 0;// for stop the while loop will be equal to images length
-    let imagesViewPort = [];// for draw images with random sources of images
+   
 
     // multiply by 2 images sources and push it on the tab images
     imgSources.forEach(e => {
@@ -52,17 +54,29 @@ function start(){
        img.setAttribute("src",imagesViewPort[i]);// set the source of the image with the tab imagesViewPort index
        img.setAttribute("alt","image " + i);// set alt
        img.setAttribute("onDragStart","return false");// forbiden the drag of image
+       
         img.className = ("front");
-        img.classList.add("notVisible");
+        
         //attributes and class for back face 
         imgRevers.className = ("back");
-        imgRevers.classList.add("Visible");
-
+        imgRevers.classList.add("visible");
+        
         vp.appendChild(_div);// create the div on view port
         _div.appendChild(img);//insert img on the view port
-        _div.appendChild(imgRevers)
-    
+        _div.appendChild(imgRevers);//insert the back face
+    // div.
     }
+
   
 }
 start();
+// function reverseCard(e) {
+//     e.preventDefault;
+//     console.log("reverse");
+//     e.classList.replace("visible", "notVisible");
+// }
+// 
+// let backfaces = document.getElementsByClassName("back");
+// backfaces.forEach(e => {
+//     e.onclick = reverseCard(e);
+// });
