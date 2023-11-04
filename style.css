@@ -10,11 +10,16 @@
 body{
     font-size: 4rem;
     background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height : 500px;
 }
 h1{
    
     font-size: 6rem;
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 0.5rem;
     text-align: center;
@@ -55,7 +60,6 @@ div .back{
 #view_port{
     width: 70rem;
     margin: auto;
-    margin-top: 10rem;
     display: grid;
     grid-template-columns: 10rem 10rem 10rem 10rem 10rem 10rem;
     grid-row:  10rem 10rem 10rem;
@@ -69,16 +73,14 @@ div .back{
         
     }
     #view_port {
-        width: 45rem;
-        margin: auto;
-        margin-top: 7rem;
+        width: 41rem;
         display: grid;
         grid-template-columns: 7rem 7rem 7rem 7rem 7rem 7rem;
         grid-row:  7rem 7rem 7rem;
         gap: 1rem;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     img, div.back {
         width: 4rem;
         height: 4rem;
@@ -86,10 +88,8 @@ div .back{
         
     }
     #view_port {
-    z-index: 1;
-        width: 35rem;
-        margin-left :  4rem;
-        margin-top: 4rem;
+        z-index: 1;
+        width: 28rem;
         display: grid;
         grid-template-columns: 4rem 4rem 4rem 4rem 4rem 4rem;
         grid-row:  4rem 4rem 4rem;
