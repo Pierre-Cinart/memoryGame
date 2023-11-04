@@ -132,6 +132,16 @@ function verif(){
 
 function win(){
     console.log("win en : " + hit + 'coups');
+    alert("vous avez gagné en : " + hit + 'coups');
+    vp.innerHTML = "";
+    
+    // Reset 
+    imagesViewPort = [];
+    imagesSelect = [];
+    nbOfImages = 0;
+    hit = 0;
+    //restart
+    start();
 }
 
 start();
