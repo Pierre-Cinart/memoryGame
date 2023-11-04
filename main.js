@@ -75,6 +75,20 @@ function start(){
         _div.appendChild(imgRevers);//insert the back face
     // div.
     }
+     // Désactivez le clic droit et le glisser-déposer sur toutes les images
+    // Sélectionnez toutes les images de votre page
+const allImages = document.querySelectorAll('img');
+
+    // Désactivez le clic droit sur chaque image
+    allImages.forEach(function(image) {
+        image.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+});
+
+    
+
+
     console.log("nb img :" + nbOfImages)
   
 }
